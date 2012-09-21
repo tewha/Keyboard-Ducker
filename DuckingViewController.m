@@ -28,7 +28,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    
     NSError *e;
     NSString *text = [NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"ModalViewControllerBlurb" ofType:@"txt"] encoding:NSUTF8StringEncoding error:&e];
     _textView.text = text;
@@ -37,37 +37,40 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear: animated];
+    
     NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
     [notificationCenter addObserver:self selector:@selector(keyboardWillShowNotification:) name:UIKeyboardWillShowNotification object:nil];
     [notificationCenter addObserver:self selector:@selector(keyboardWillHideNotification:) name:UIKeyboardWillHideNotification object:nil];
-    [_textView becomeFirstResponder];
+    
+    // The view is not fully set up the first time viewWillAppear is called, so instead of assigning the first responder immediately we wait for events already in the main queue to be handled. In particular, this makes view coordinate conversion in keyboardWillShowNotification work as expected.
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [_textView becomeFirstResponder];
+    });
 }
 
 
 - (void)keyboardWillShowNotification:(NSNotification *)notification {
     
-    dispatch_async(dispatch_get_main_queue(), ^{
-        NSDictionary *userInfo = [notification userInfo];
-        UIView *workingView = self.view;
-        CGRect keyboardScreenRect = [[userInfo objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue];
-        CGRect keyboardRect = [workingView convertRect:keyboardScreenRect fromView:nil];
-        CGRect resizeRect = [workingView convertRect:_resizingView.superview.bounds fromView:_resizingView.superview];
-        CGRect unionRect = CGRectIntersection(keyboardRect, resizeRect);
-        CGFloat bottom = resizeRect.origin.y + resizeRect.size.height;
-        if (!isinf(unionRect.origin.y)) {
-            bottom = unionRect.origin.y;
-        }
-        
-        CGRect newFrame = _resizingView.frame;
-        newFrame.size.height = [_resizingView.superview convertPoint:(CGPoint){.x=0.0f, .y=bottom} fromView:workingView].y - newFrame.origin.y;
-        
-        UIViewAnimationCurve curve = [[userInfo objectForKey:UIKeyboardAnimationCurveUserInfoKey] unsignedIntegerValue];
-        NSTimeInterval duration = [[userInfo objectForKey:UIKeyboardAnimationDurationUserInfoKey] doubleValue];
-        [UIView animateWithDuration: duration delay: 0 options: (curve << 16) animations:^{
-            _resizingView.frame = newFrame;
-        } completion:^(BOOL finished) {
-        }];
-    });
+    NSDictionary *userInfo = [notification userInfo];
+    UIView *workingView = self.view;
+    CGRect keyboardScreenRect = [[userInfo objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue];
+    CGRect keyboardRect = [workingView convertRect:keyboardScreenRect fromView:nil];
+    CGRect resizeRect = [workingView convertRect:_resizingView.superview.bounds fromView:_resizingView.superview];
+    CGRect unionRect = CGRectIntersection(keyboardRect, resizeRect);
+    CGFloat bottom = resizeRect.origin.y + resizeRect.size.height;
+    if (!isinf(unionRect.origin.y)) {
+        bottom = unionRect.origin.y;
+    }
+    
+    CGRect newFrame = _resizingView.frame;
+    newFrame.size.height = [_resizingView.superview convertPoint:(CGPoint){.x=0.0f, .y=bottom} fromView:workingView].y - newFrame.origin.y;
+    
+    UIViewAnimationCurve curve = [[userInfo objectForKey:UIKeyboardAnimationCurveUserInfoKey] unsignedIntegerValue];
+    NSTimeInterval duration = [[userInfo objectForKey:UIKeyboardAnimationDurationUserInfoKey] doubleValue];
+    [UIView animateWithDuration: duration delay: 0 options: (curve << 16) animations:^{
+        _resizingView.frame = newFrame;
+    } completion:^(BOOL finished) {
+    }];
     
 }
 
