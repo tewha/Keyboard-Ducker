@@ -1,0 +1,3 @@
+Note that the content view’s frame is automatically adjusted to avoid the keyboard. You can hide the keyboard or rotate the device, and the frame will be updated automatically.
+
+On the iPad, the keyboard is only avoided when it is docked to the bottom of the screen.

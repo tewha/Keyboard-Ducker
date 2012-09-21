@@ -1,0 +1,3 @@
+Demonstrates how to have a view avoid the keyboard on iPhone and iPad, regardless of orientation, presentation style or even top of the view.
+
+Rotate your device any way, then tap the button below to show the editable text view.

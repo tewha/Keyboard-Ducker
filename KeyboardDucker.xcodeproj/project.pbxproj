@@ -1,0 +1,331 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A746B692160BD35E00B32B7F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A746B691160BD35E00B32B7F /* UIKit.framework */; };
+		A746B694160BD35E00B32B7F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A746B693160BD35E00B32B7F /* Foundation.framework */; };
+		A746B696160BD35E00B32B7F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A746B695160BD35E00B32B7F /* CoreGraphics.framework */; };
+		A746B69C160BD35E00B32B7F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A746B69A160BD35E00B32B7F /* InfoPlist.strings */; };
+		A746B69E160BD35E00B32B7F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A746B69D160BD35E00B32B7F /* main.m */; };
+		A746B6A5160BD35E00B32B7F /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A746B6A3160BD35E00B32B7F /* MainStoryboard_iPhone.storyboard */; };
+		A746B6A8160BD35E00B32B7F /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A746B6A6160BD35E00B32B7F /* MainStoryboard_iPad.storyboard */; };
+		A75266FC160C070800186D46 /* ViewControllerBlurb.txt in Resources */ = {isa = PBXBuildFile; fileRef = A75266FA160C070800186D46 /* ViewControllerBlurb.txt */; };
+		A7526700160C082900186D46 /* ModalViewControllerBlurb.txt in Resources */ = {isa = PBXBuildFile; fileRef = A75266FE160C082900186D46 /* ModalViewControllerBlurb.txt */; };
+		A7526712160C0BB300186D46 /* KeyboardDuckerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A752670D160C0BB300186D46 /* KeyboardDuckerDelegate.m */; };
+		A7526713160C0BB300186D46 /* DuckingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A752670F160C0BB300186D46 /* DuckingViewController.m */; };
+		A7526714160C0BB300186D46 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7526711160C0BB300186D46 /* RootViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A746B68D160BD35E00B32B7F /* KeyboardDucker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeyboardDucker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A746B691160BD35E00B32B7F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		A746B693160BD35E00B32B7F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		A746B695160BD35E00B32B7F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		A746B699160BD35E00B32B7F /* KeyboardDucker-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KeyboardDucker-Info.plist"; sourceTree = "<group>"; };
+		A746B69B160BD35E00B32B7F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A746B69D160BD35E00B32B7F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A746B69F160BD35E00B32B7F /* KeyboardDucker-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KeyboardDucker-Prefix.pch"; sourceTree = "<group>"; };
+		A746B6A4160BD35E00B32B7F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		A746B6A7160BD35E00B32B7F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		A75266FB160C070800186D46 /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = en.lproj/ViewControllerBlurb.txt; sourceTree = "<group>"; };
+		A75266FF160C082900186D46 /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = en.lproj/ModalViewControllerBlurb.txt; sourceTree = "<group>"; };
+		A752670C160C0BB300186D46 /* KeyboardDuckerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyboardDuckerDelegate.h; sourceTree = "<group>"; };
+		A752670D160C0BB300186D46 /* KeyboardDuckerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyboardDuckerDelegate.m; sourceTree = "<group>"; };
+		A752670E160C0BB300186D46 /* DuckingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DuckingViewController.h; sourceTree = "<group>"; };
+		A752670F160C0BB300186D46 /* DuckingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DuckingViewController.m; sourceTree = "<group>"; };
+		A7526710160C0BB300186D46 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		A7526711160C0BB300186D46 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A746B68A160BD35E00B32B7F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A746B692160BD35E00B32B7F /* UIKit.framework in Frameworks */,
+				A746B694160BD35E00B32B7F /* Foundation.framework in Frameworks */,
+				A746B696160BD35E00B32B7F /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A746B682160BD35E00B32B7F = {
+			isa = PBXGroup;
+			children = (
+				A746B697160BD35E00B32B7F /* KeyboardDucker */,
+				A746B690160BD35E00B32B7F /* Frameworks */,
+				A746B68E160BD35E00B32B7F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A746B68E160BD35E00B32B7F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A746B68D160BD35E00B32B7F /* KeyboardDucker.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A746B690160BD35E00B32B7F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A746B691160BD35E00B32B7F /* UIKit.framework */,
+				A746B693160BD35E00B32B7F /* Foundation.framework */,
+				A746B695160BD35E00B32B7F /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A746B697160BD35E00B32B7F /* KeyboardDucker */ = {
+			isa = PBXGroup;
+			children = (
+				A752670C160C0BB300186D46 /* KeyboardDuckerDelegate.h */,
+				A752670D160C0BB300186D46 /* KeyboardDuckerDelegate.m */,
+				A752670E160C0BB300186D46 /* DuckingViewController.h */,
+				A752670F160C0BB300186D46 /* DuckingViewController.m */,
+				A7526710160C0BB300186D46 /* RootViewController.h */,
+				A7526711160C0BB300186D46 /* RootViewController.m */,
+				A746B6A3160BD35E00B32B7F /* MainStoryboard_iPhone.storyboard */,
+				A746B6A6160BD35E00B32B7F /* MainStoryboard_iPad.storyboard */,
+				A746B698160BD35E00B32B7F /* Supporting Files */,
+			);
+			name = KeyboardDucker;
+			sourceTree = "<group>";
+		};
+		A746B698160BD35E00B32B7F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A75266FE160C082900186D46 /* ModalViewControllerBlurb.txt */,
+				A75266FA160C070800186D46 /* ViewControllerBlurb.txt */,
+				A746B699160BD35E00B32B7F /* KeyboardDucker-Info.plist */,
+				A746B69A160BD35E00B32B7F /* InfoPlist.strings */,
+				A746B69D160BD35E00B32B7F /* main.m */,
+				A746B69F160BD35E00B32B7F /* KeyboardDucker-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A746B68C160BD35E00B32B7F /* KeyboardDucker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A746B6AE160BD35E00B32B7F /* Build configuration list for PBXNativeTarget "KeyboardDucker" */;
+			buildPhases = (
+				A746B689160BD35E00B32B7F /* Sources */,
+				A746B68A160BD35E00B32B7F /* Frameworks */,
+				A746B68B160BD35E00B32B7F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KeyboardDucker;
+			productName = KeyboardDucker;
+			productReference = A746B68D160BD35E00B32B7F /* KeyboardDucker.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A746B684160BD35E00B32B7F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0440;
+				ORGANIZATIONNAME = "Discovery Software";
+			};
+			buildConfigurationList = A746B687160BD35E00B32B7F /* Build configuration list for PBXProject "KeyboardDucker" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A746B682160BD35E00B32B7F;
+			productRefGroup = A746B68E160BD35E00B32B7F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A746B68C160BD35E00B32B7F /* KeyboardDucker */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A746B68B160BD35E00B32B7F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A746B69C160BD35E00B32B7F /* InfoPlist.strings in Resources */,
+				A746B6A5160BD35E00B32B7F /* MainStoryboard_iPhone.storyboard in Resources */,
+				A746B6A8160BD35E00B32B7F /* MainStoryboard_iPad.storyboard in Resources */,
+				A75266FC160C070800186D46 /* ViewControllerBlurb.txt in Resources */,
+				A7526700160C082900186D46 /* ModalViewControllerBlurb.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A746B689160BD35E00B32B7F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A746B69E160BD35E00B32B7F /* main.m in Sources */,
+				A7526712160C0BB300186D46 /* KeyboardDuckerDelegate.m in Sources */,
+				A7526713160C0BB300186D46 /* DuckingViewController.m in Sources */,
+				A7526714160C0BB300186D46 /* RootViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A746B69A160BD35E00B32B7F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A746B69B160BD35E00B32B7F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		A746B6A3160BD35E00B32B7F /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A746B6A4160BD35E00B32B7F /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		A746B6A6160BD35E00B32B7F /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A746B6A7160BD35E00B32B7F /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		A75266FA160C070800186D46 /* ViewControllerBlurb.txt */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A75266FB160C070800186D46 /* en */,
+			);
+			name = ViewControllerBlurb.txt;
+			sourceTree = "<group>";
+		};
+		A75266FE160C082900186D46 /* ModalViewControllerBlurb.txt */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A75266FF160C082900186D46 /* en */,
+			);
+			name = ModalViewControllerBlurb.txt;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A746B6AC160BD35E00B32B7F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A746B6AD160BD35E00B32B7F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A746B6AF160BD35E00B32B7F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KeyboardDucker-Prefix.pch";
+				INFOPLIST_FILE = "KeyboardDucker-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		A746B6B0160BD35E00B32B7F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KeyboardDucker-Prefix.pch";
+				INFOPLIST_FILE = "KeyboardDucker-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A746B687160BD35E00B32B7F /* Build configuration list for PBXProject "KeyboardDucker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A746B6AC160BD35E00B32B7F /* Debug */,
+				A746B6AD160BD35E00B32B7F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A746B6AE160BD35E00B32B7F /* Build configuration list for PBXNativeTarget "KeyboardDucker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A746B6AF160BD35E00B32B7F /* Debug */,
+				A746B6B0160BD35E00B32B7F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A746B684160BD35E00B32B7F /* Project object */;
+}
