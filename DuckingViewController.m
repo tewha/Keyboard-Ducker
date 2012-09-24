@@ -49,6 +49,16 @@
 }
 
 
+- (void)viewDidDisappear:(BOOL)animated {
+    
+    NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
+    [notificationCenter removeObserver:self name:UIKeyboardWillShowNotification object:nil];
+    [notificationCenter removeObserver:self name:UIKeyboardWillHideNotification object:nil];
+    
+    [super viewDidDisappear: animated];
+}
+
+
 - (void)keyboardWillShowNotification:(NSNotification *)notification {
     
     NSDictionary *userInfo = [notification userInfo];
